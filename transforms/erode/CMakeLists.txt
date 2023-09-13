@@ -13,5 +13,5 @@ target_link_libraries(erode "${TORCH_LIBRARIES}")
 #set(OpenCV_DIR /home/terence/libs/opencv/build)
 # Link against OpenCV
 target_link_libraries(erode opencv_core opencv_imgproc)
-set(CUDA_HOME /usr/local/cuda)
-set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda)
+# set(CUDA_HOME /usr/local/cuda)
+# set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda)
