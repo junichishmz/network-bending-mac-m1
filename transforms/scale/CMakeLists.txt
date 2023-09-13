@@ -12,5 +12,5 @@ target_compile_features(scale PRIVATE cxx_std_14)
 target_link_libraries(scale "${TORCH_LIBRARIES}")
 # Link against OpenCV
 target_link_libraries(scale opencv_core opencv_imgproc)
-set(CUDA_HOME /usr/local/cuda)
-set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda)
+# set(CUDA_HOME /usr/local/cuda)
+# set(CUDA_TOOLKIT_ROOT_DIR /usr/local/cuda)

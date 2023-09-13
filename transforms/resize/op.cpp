@@ -21,7 +21,7 @@ torch::Tensor resize(torch::Tensor image, double border_x, double border_y) {
   std::cout << "image_out_size" << output_mat.rows << std::endl;
   torch::Tensor output =
     torch::from_blob(output_mat.ptr<float>(),{output_mat.rows, output_mat.cols});
-  return output.clone().to(torch::kCUDA);
+  return output.clone().to(torch::kCPU);
 }
 
 static auto registry =

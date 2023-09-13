@@ -49,13 +49,13 @@ def generate_from_latent(args, g_ema, device, mean_latent, yaml_config, cluster_
             )
 
 if __name__ == '__main__':
-    device = 'cuda'
+    device = 'cpu'
 
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--size', type=int, default=1024)
     parser.add_argument('--sample', type=int, default=1)
-    parser.add_argument('--pics', type=int, default=20)
+    parser.add_argument('--pics', type=int, default=5)
     parser.add_argument('--truncation', type=float, default=0.5)
     parser.add_argument('--truncation_mean', type=int, default=4096)
     parser.add_argument('--ckpt', type=str, default="models/stylegan2-ffhq-config-f.pt")
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     yaml_config = {}
     with open(args.config, 'r') as stream:
         try:
-            yaml_config = yaml.load(stream)
+            yaml_config = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
             print(exc)
     
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     if args.clusters != "":
         with open(args.clusters, 'r') as stream:
             try:
-                cluster_config = yaml.load(stream)
+                cluster_config = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
                 print(exc)
 

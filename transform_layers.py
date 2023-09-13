@@ -7,12 +7,23 @@ import torch.utils.cpp_extension
 import random
 import os
 
-torch.ops.load_library("transforms/erode/build/liberode.so")
-torch.ops.load_library("transforms/dilate/build/libdilate.so")
-torch.ops.load_library("transforms/scale/build/libscale.so")
-torch.ops.load_library("transforms/rotate/build/librotate.so")
-torch.ops.load_library("transforms/resize/build/libresize.so")
-torch.ops.load_library("transforms/translate/build/libtranslate.so")
+MODEL_PATH =''
+
+
+# torch.ops.load_library(MODEL_PATH + "transforms/erode/build/liberode.so")
+# torch.ops.load_library(MODEL_PATH + "transforms/dilate/build/libdilate.so")
+# torch.ops.load_library(MODEL_PATH + "transforms/scale/build/libscale.so")
+# torch.ops.load_library(MODEL_PATH + "transforms/rotate/build/librotate.so")
+# torch.ops.load_library(MODEL_PATH + "transforms/resize/build/libresize.so")
+# torch.ops.load_library(MODEL_PATH + "transforms/translate/build/libtranslate.so")
+
+# for mac
+torch.ops.load_library(MODEL_PATH + "transforms/erode/build/liberode.dylib")
+torch.ops.load_library(MODEL_PATH + "transforms/dilate/build/libdilate.dylib")
+torch.ops.load_library(MODEL_PATH + "transforms/scale/build/libscale.dylib")
+torch.ops.load_library(MODEL_PATH + "transforms/rotate/build/librotate.dylib")
+torch.ops.load_library(MODEL_PATH + "transforms/resize/build/libresize.dylib")
+torch.ops.load_library(MODEL_PATH + "transforms/translate/build/libtranslate.dylib")
 
 class Erode(nn.Module):
     def __init__(self):

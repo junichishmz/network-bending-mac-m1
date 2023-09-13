@@ -1,4 +1,16 @@
-# Network Bending
+# Network Bending App
+
+## Install Libtorch for mac m1
+
+- [libtorch-mac-m1](https://github.com/mlverse/libtorch-mac-m1)
+
+
+## Sample Command
+
+```sh
+python generate.py --ckpt models/stylegan2-ffhq-config-f.pt --size 1024 --pics 10 --config configs/example_transform_config.yaml
+```
+
 
 ![Header image](figures/header.png)
 

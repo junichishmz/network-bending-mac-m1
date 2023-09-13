@@ -10,41 +10,41 @@ cd transforms/resize
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
 cd ../../dilate
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
 cd ../../erode
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
 cd ../../rotate
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
 cd ../../scale
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
 cd ../../translate
 mkdir -p build
 cd build
 rm -rf *
-cmake -DCMAKE_PREFIX_PATH=$1 ..
+cmake -DCMAKE_PREFIX_PATH=../../libtorch ..
 make -j
 
