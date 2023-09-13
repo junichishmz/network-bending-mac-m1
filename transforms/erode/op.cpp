@@ -19,7 +19,7 @@ torch::Tensor erode(torch::Tensor image, int64_t dilation_size) {
 
   torch::Tensor output =
     torch::from_blob(output_mat.ptr<float>(),{image.size(0), image.size(1)});
-  return output.clone().to(torch::kCPU);
+  return output.clone().to(torch::kCUDA);
 }
 
 static auto registry =
